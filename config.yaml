@@ -1,0 +1,28 @@
+paths:
+  urmp: data/URMP/Dataset           # unpacked URMP
+  solos: data/solos                 # downloaded solo videos (video/, audio/) and MUSIC21_solo_videos.json
+  cache: cache                      # frames, masks, features, outputs
+  benchmark_lists: data/benchmark_lists/*.csv   # MUSIC / MUSIC-21 test lists, left out of training
+  sam2_ckpt: checkpoints/sam2.1_hiera_large.pt
+  sam2_cfg: configs/sam2.1/sam2.1_hiera_l.yaml  # inside the sam2 package
+  mega_yaml: checkpoints/mega53.yaml            # MVSep Mega 53-stem BS-RoFormer config
+  mega_ckpt: checkpoints/mega53.ckpt            # MVSep Mega weights, training only
+  model: checkpoints/who_plays_what.pt          # the trained model
+  stats: checkpoints/stats.npz                  # keypoint normalisation (solos.py stats)
+  urmp_clicks: assets/urmp_clicks.json          # one click per URMP player, checked by hand
+
+sr: 44100
+fps: 25
+frame_width: 960              # frames for SAM 2 tracking and the keypoints; V-JEPA 2 uses the full-resolution frames
+sam2_chunk_s: 60              # SAM 2 is re-prompted with the click every chunk
+pose_thr: 0.3
+
+clip_s: 4.0
+clip_extra_s: 0.4             # extra audio/video kept per clip, used for time-stretching
+clip_hop_s: 2.0
+clips_per_recording: 40
+min_dbfs: -40
+min_person_frac: 0.8
+val_frac: 0.05
+n_val_pairs: 500
+seed: 0

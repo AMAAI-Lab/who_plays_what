@@ -1,0 +1,22 @@
+# Python 3.11, NVIDIA GPUs. Install torch / torchvision for your CUDA version first if the default build does not match.
+torch==2.14.1
+torchvision==0.29.1
+numpy==2.4.6
+scipy==1.17.1
+pandas==3.0.6
+pillow==12.3.0
+opencv-python==4.11.0.86
+PyYAML==6.0.3
+einops==0.8.2
+beartype==0.22.9
+rotary-embedding-torch==0.8.9
+packaging==26.0
+librosa==0.11.0
+soundfile==0.14.0
+museval==0.4.1
+transformers==5.20.0
+rtmlib==0.0.16
+onnxruntime-gpu==1.31.0
+yt-dlp==2026.8.19
+solos==0.4.1
+SAM-2 @ git+https://github.com/facebookresearch/sam2.git@2b90b9f5ceec907a1c18123530e92e794ad901a4
