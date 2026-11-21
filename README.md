@@ -155,8 +155,13 @@ python -m whoplays.solos stats                                         # keypoin
 ### Pretrained trunk
 
 Training starts from the MVSep Mega 53-stem BS-RoFormer by ZFTurbo ([MVSep](https://mvsep.com),
-[Music-Source-Separation-Training](https://github.com/ZFTurbo/Music-Source-Separation-Training)). Put its weights at
-`checkpoints/mega53.ckpt`. Its config, `checkpoints/mega53.yaml`, comes with our model download.
+[Music-Source-Separation-Training v1.0.21](https://github.com/ZFTurbo/Music-Source-Separation-Training/releases/tag/v1.0.21)).
+Its config, `checkpoints/mega53.yaml`, comes with our model download; download its weights (1.4 GB):
+
+```bash
+wget -O checkpoints/mega53.ckpt https://github.com/ZFTurbo/Music-Source-Separation-Training/releases/download/v1.0.21/mvsep_mega_model_bs_roformer_53_stems_v1.ckpt
+# sha256: c62820893bbf86d4e734f966bd142d9157cfc8bb8e79e9d8f9ea553f3ff3519f
+```
 
 ### Run
 
