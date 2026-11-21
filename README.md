@@ -17,6 +17,8 @@ Abhinaba Roy<sup>1</sup>, Ambuj Mehrish<sup>2</sup>, Sebastiano Vascon<sup>2</su
 
 </div>
 
+<p align="center"><img src="assets/teaser.png" width="100%" alt="Click a player in an ensemble video and hear only that player. Two violins sound alike, but each player's bow motion lines up with their own notes."></p>
+
 **Click on one musician in a video and hear only that musician**, even when another player of the *same instrument*
 plays at the same time.
 
@@ -43,17 +45,7 @@ The model is trained only on artificial mixes of solo YouTube performances. URMP
 
 ## How it works
 
-```mermaid
-flowchart LR
-    C([click]) --> S[SAM 2.1<br/>tracks the player]
-    V([video]) --> S
-    S --> J[V-JEPA 2<br/>frozen video features]
-    S --> K[RTMW<br/>48 body + hand keypoints]
-    A([recording]) --> M
-    J --> M[MVSep Mega BS-RoFormer<br/>+ cross-attention to the player's video]
-    K --> M
-    M --> O([the clicked player's sound])
-```
+<p align="center"><img src="assets/method.png" width="100%" alt="Method overview: SAM 2.1 tracks the clicked player; frozen V-JEPA 2 and RTMW motion tokens on a shared 10 ms grid; the BS-RoFormer separator cross-attends to them; a mask head gives the clicked player's sound."></p>
 
 * **Prompt.** One click on the player, like SAM's point prompt. SAM 2.1 follows them through the video.
 * **Video.** A frozen V-JEPA 2 ViT-L grid of the player's crop (12.5 / s), plus box-normalised velocities of 48 body
