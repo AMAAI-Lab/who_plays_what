@@ -2,13 +2,13 @@
 
 # Who Plays What
 
-### Click-Promptable Per-Player Music Separation from Video
+### Same-Instrument Music Separation from Video
 
 Abhinaba Roy<sup>1</sup>, Ambuj Mehrish<sup>2</sup>, Sebastiano Vascon<sup>2</sup>, Dorien Herremans<sup>1</sup>
 
 <sup>1</sup> Singapore University of Technology and Design &nbsp;&nbsp; <sup>2</sup> University of Venice
 
-[![Paper](https://img.shields.io/badge/arXiv-coming%20soon-b31b1b.svg)](#citation)
+[![arXiv:2611.29411](https://img.shields.io/badge/arXiv-2611.29411-b31b1b.svg)](https://arxiv.org/abs/2611.29411)
 [![Demo](https://img.shields.io/badge/Demo-audio%20examples-ff4d4d.svg)](https://amaai-lab.github.io/who_plays_what_demo/)
 [![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Model-who__plays__what-yellow)](https://huggingface.co/amaai-lab/who_plays_what)
 [![Data](https://img.shields.io/badge/%F0%9F%A4%97%20Data-who__plays__what-yellow)](https://huggingface.co/datasets/amaai-lab/who_plays_what)
@@ -186,11 +186,14 @@ Our model took about 14 h on 4 RTX PRO 6000 GPUs (best at step 37k). Evaluate a 
 ## Citation
 
 ```bibtex
-@article{whoplayswhat,
-  title   = {Who Plays What: Click-Promptable Per-Player Music Separation from Video},
-  author  = {Roy, Abhinaba and Mehrish, Ambuj and Vascon, Sebastiano and Herremans, Dorien},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX},
-  year    = {2026}
+@misc{whoplayswhat,
+  title         = {Who Plays What: Same-Instrument Music Separation from Video},
+  author        = {Roy, Abhinaba and Mehrish, Ambuj and Vascon, Sebastiano and Herremans, Dorien},
+  year          = {2026},
+  eprint        = {2611.29411},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.SD},
+  url           = {https://arxiv.org/abs/2611.29411}
 }
 ```
 
